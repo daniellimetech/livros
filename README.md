@@ -28,3 +28,9 @@ O `vercel.json` define o preset sem framework, o comando `npm run build` e a sa�
 Para verificar antes de publicar: `npm test` e `npm run build`.
 
 Os registros locais não migram para o domínio da Vercel. Cada domínio e navegador mantém seus próprios dados; exporte um backup antes de mudar de endereço. A interface ainda não oferece importação desse backup.
+
+## Rodízio por categoria
+
+A biblioteca é agrupada por categoria. No painel de rodízio, escolha o leitor: apenas seus livros com status **Lendo** entram na sequência. O botão **Li as 10 páginas** registra as páginas, cria um evento no histórico e passa para outra categoria. Na próxima visita à categoria, o app alterna entre os livros ativos dela. Para incluir uma leitura, edite o livro e marque **Lendo**.
+
+Se restarem menos de 10 páginas, o painel mostra a quantidade restante e conclui o livro ao confirmar. Com apenas uma categoria ativa, o rodízio continua nela e exibe um aviso para adicionar outra. Livros com total desconhecido aceitam blocos de 10; informe o total ao concluir. Você e Lorena têm sequências independentes, salvas localmente junto com o progresso. Atualizações do app preservam os registros existentes no mesmo domínio e navegador.
